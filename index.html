@@ -2,12 +2,31 @@
 <html>
    <head>
       <meta charset="utf-8">
-      <title>Average COVID-19 Cases in Washington Counties</title>
-      <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-      <!-- Including the Mapbox GL CSS file -->
-      <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
-      <!-- Including the Mapbox GL JS file -->
-      <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
+      <html>
+        <head>
+           <meta charset="utf-8">
+           <title>Average COVID-19 Cases in Washington Counties</title>
+           <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+           <!-- Including the Mapbox GL CSS file -->
+           <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
+           <!-- Including the Mapbox GL JS file -->
+           <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
+           <style>
+              /* [existing CSS styles here...] */
+           </style>
+        </head>
+        <body>
+           <div id="map"></div>
+           <div class='map-overlay' id='features'>
+              <h2> Cumulative COVID-19 Cases in Washington Counties</h2>
+              <div id='text-description'>
+                 <p>Hover over a county!</p>
+              </div>
+           </div>
+           <div class="switch-box">
+              <button onclick="window.location.href='./pop_density.html'">Population Density Map</button>
+           </div>
+           <div class='map-overlay' id='legend'></div>
       <style>
          /* CSS styles for heading and paragraphs */
          h2,
